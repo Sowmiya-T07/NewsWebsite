@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <nav>
+        <div class="main-nav container flex">
+            <a href="" class="company-logo">
+                <img src="images/logo (3).png" alt="logo">
+            </a>
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="hover-link nav-item" id="cricket" onClick="onNavItemClick('cricket')">Cricket</li>
+                    <li class="hover-link nav-item" id="india" onClick="onNavItemClick('india')">India</li>
+                    <li class="hover-link nav-item" id="technology" onClick="onNavItemClick('technology')">Technology
+                    </li>
+                    <li class="hover-link nav-item" id="politics" onClick="onNavItemClick('politics')">Politics</li>
+
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input type="text" class="news-input" id="search-text" placeholder="e.g. Science">
+                <button class="search-button" id="search-button">Search</button>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+        <div class="cards-container container flex" id="cardscontainer">
+
+
+
+        </div>
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="images/NewsWebsite (2).png/400x200" alt="" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the Title</h3>
+                <h6 class="news-source" id="news-source">constGenius 02/02/2024</h6>
+                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem
+                    incidunt ratione, dolore beatae quaerat voluptatum autem fugit voluptas minima eligendi facere
+                    tenetur cumque. Dolorem porro, fugiat distinctio a accusamus cum!</p>
+            </div>
+
+            <div class="card-reactions">
+    <button class="emoji-btn" onclick="react(this, 'like')">👍</button>
+    <button class="emoji-btn" onclick="react(this, 'love')">❤️</button>
+    <button class="emoji-btn" onclick="react(this, 'wow')">😮</button>
+</div>
+
+        </div>
+    </template>
+
+     <section class="newsletter"> 
+     <h2>📩 Subscribe to Our Newsletter</h2>
+    <p>Stay updated with the latest news!</p>
+    <form id="newsletter-form">
+        <input type="email" id="email-input" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+    </form>
+    <p id="subscription-msg"></p>
+</section> 
+
+<button id="scrollTopBtn" title="Go to top">⬆️</button>
+
+<section class="feedback-section">
+  <h2>🗣️ We value your feedback!</h2>
+  <form id="feedback-form">
+    <textarea id="feedback-text" placeholder="Write your feedback here..." required></textarea>
+    <button type="submit">Submit</button>
+  </form>
+  <p id="feedback-msg"></p>
+
+  <div id="feedback-list"></div>
+</section>
+
+</body>
+
+</html>
